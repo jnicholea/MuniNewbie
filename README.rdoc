@@ -1,5 +1,7 @@
 == README
 
+Educational app for bus newbs aiming to encourage greater bus utilization among residents and visitors.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
