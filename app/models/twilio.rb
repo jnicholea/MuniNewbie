@@ -1,8 +1,17 @@
 require 'twilio-ruby'
 
-@client = Twilio::REST::Client.new account_sid, auth_token
+class Twilio
 
-Twilio.configure do |config|
-  config.account_sid = account_sid
-  config.auth_token = auth_token
+def self.text_update(message)
+
+  @client = Twilio::REST::Client.new(Rails.application.secrets.twilio_api_key,  Rails.application.secrets.twilio_api_secret)
+
+  @client.messages.create(
+    from: '+16693421992',
+    to: '+2406004572',
+    body: 'Hey there!'
+  )
 end
+
+end
+

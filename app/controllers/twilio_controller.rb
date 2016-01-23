@@ -1,10 +1,11 @@
 class TwilioController < ApplicationController
 
   def index
+    Twilio.
   end
 
   def new
-    @user = User.new
+
   end
 
   def create
