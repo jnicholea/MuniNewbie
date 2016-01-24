@@ -1,0 +1,8 @@
+<h1> Enter your trip details below </h1>
+<%=form_for :user, url: {action: "create"} do |f| %>
+<p><%= f.text_field :phone, placeholder: "Phone" %></p>
+<p><%= f.text_field :stop_id, placeholder: "Stop ID" %></p>
+<p><%= f.text_field :bus_num, placeholder: "Bus Number"%></p>
+<p><%= f.text_field :stopping_point, placeholder: "Destination Address"%></p>
+<p><%= f.submit "Submit"%></p>
+<%end%>
