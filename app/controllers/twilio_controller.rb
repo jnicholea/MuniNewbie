@@ -1,7 +1,7 @@
 class TwilioController < ApplicationController
 
   def index
-
+    @user = User.find(session[:user_id])
   end
 
   def new
@@ -11,6 +11,7 @@ class TwilioController < ApplicationController
   def create
     info = params[:user]
     @user = User.create(phone: info["phone"], bus_num: info["bus_num"], stop_id: info["stop_id"], stopping_point: info["stopping_point"])
+    session[:user_id] = @user.id
     @bus_num = @user.bus_num
     #make API call to 511 to get bus status update
 
@@ -22,8 +23,8 @@ class TwilioController < ApplicationController
 
   def update
 
+    #make api call
   end
 
-  def delete
-  end
+
 end
