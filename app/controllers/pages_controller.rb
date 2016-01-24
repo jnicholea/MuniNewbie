@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
 	def index
-		@result = Page.realtime_update
+		@result = Page.all_route_stops
 	end
 end
