@@ -15,6 +15,15 @@ class TwilioController < ApplicationController
     #make API call to 511 to get bus status update
 
     #text user
-    User.text_update(@user.phone, '5')
+    est_time = 5
+    message = "Hey! Bus ##{@bus_num} is #{est_time} minutes away!"
+    User.text_update(@user.phone, message)
+  end
+
+  def update
+
+  end
+
+  def delete
   end
 end
