@@ -6,5 +6,8 @@ Rails.application.initialize!
 
 require 'httparty'
 require 'rubygems'
+require 'sfba_transit_api'
+
+
 
 
